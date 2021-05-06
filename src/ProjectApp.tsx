@@ -12,20 +12,21 @@ class ProjectApp extends React.Component<{}, IProjectState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      projectId: 0,
+      projectId: 1,
       projectName: "",
       checkpoints: [],
       showAlert: false,
       isError: false,
-    };
+    };  
   }
+  
   serviceUrl = "http://localhost:8080/project";
 
   getProjectDetails() {
     axios
       .get(this.serviceUrl + "/1")
       .then((response) => {
-        this.setState(response.data);
+        this.setState({...this.state, projectId: response.data.projectId, projectName: response.data.projectName, checkpoints: response.data.checkpoints});
       })
       .catch((e) => {
         this.setShowAlert(true, true);
@@ -45,7 +46,7 @@ class ProjectApp extends React.Component<{}, IProjectState> {
     );
     const task = checkpoint.tasks.find((task: any) => task.taskId === taskId);
     task.taskCompleted = !task.taskCompleted;
-    this.setState(currentState);
+    this.setState({...this.state, projectId: currentState.projectId, projectName: currentState.projectName,checkpoints: currentState.checkpoints});
   };
 
   handleSubmit = () => {
