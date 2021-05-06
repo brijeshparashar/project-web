@@ -5,7 +5,7 @@
 * Before running the application please ensure that the service is up and running else the page will show error message. Link for the service project is: https://github.com/brijeshparashar/project_services
 * Once the backend service is up then run the following commands to bring the UI application up.
     
-    1."npm install"   
+    1. "npm install"   
     
     2. "npm start"  
     
