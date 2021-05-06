@@ -94,7 +94,7 @@ class ProjectApp extends React.Component<{}, IProjectState> {
           <Accordion defaultActiveKey="0">
             {this.state.checkpoints.map(
               (checkpoint: ICheckpoint, i: number) => (
-                <div key={"checkpoint" + `${i}`}>
+                <div key={`checkpoint${i}`}>
                   <Card>
                     <Accordion.Toggle
                       className="accordion-header"
@@ -112,7 +112,7 @@ class ProjectApp extends React.Component<{}, IProjectState> {
                           </Row>
                         </div>
                         {checkpoint.tasks.map((task: ITask, index: number) => (
-                          <div key={"task" + `${i}${index}`}>
+                          <div key={`task${i}${index}`}>
                             <Task
                               key={index}
                               {...task}
