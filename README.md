@@ -1,46 +1,18 @@
-# Getting Started with Create React App
+# The Project Tacking React App.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Running the application
 
-## Available Scripts
+* Before running the application please ensure that the service is up and running else the page will show error message. Link for the service project is: https://github.com/brijeshparashar/project_services
+* Once the backend service is up then run the following commands to bring the UI application up.
+    
+    1. "npm install"   
+    
+    2. "npm start"  
+    
+* The application will automatically open in the browser running on default port 3000. The defaul URL will be http://localhost:3000
+* The page will appear on screen. And now the user can play around with the application. 
+* It will show two accordions for checkpoints as currently the DB is loaded with one Project with ProjectId - 1 and two checkpoints. 
+* By Default the backend services would be running on port 8080 so the UI application will connect to backend without any change. 
+* For some reason if the backend service is started on a different port (say 8081) then change that port into the ProjectApp.tsx file in the serviceURL.  
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
